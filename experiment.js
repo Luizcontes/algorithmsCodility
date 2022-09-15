@@ -1,29 +1,23 @@
 const prompt = require('prompt-sync')({ sigint: true })
 
 const arr = [9, 3, 9, 3, 9, 7, 155855, 9, 7, 4, 4, 5, 8, 5, 8]
+// let list = []
 
 function getOdd(a) {
 
     let list = []
 
-    let number = []
+    // let number = []
+    
     for (let i = 0; i < a.length; i++) {
         if (!list[a[i]]) {
-            list[a[i]] = 1
+            list[a[i]] = a[i]
         } else {
-            list[a[i]] += 1
+            delete list[a[i]]
         }
-
-        // if (list[a[i]] % 2 !== 0) {
-        //     number[a[i]] = 1
-        // } 
-        // if (list[a[i]] % 2 === 0) {
-        //     number[a[i]] = 0
-        // }
     }
-    return list.indexOf(1)
 
-    // console.log(list)
+    console.log(list)
 
     // console.log(list)
 
@@ -46,23 +40,23 @@ function getOdd(a) {
 
 console.log(getOdd(arr))
 
-function solution(A) {
-    let list = []
-    let number = []
+// function solution(A) {
+//     let list = []
+//     let number = []
 
-    for (let i=0; i<A.length; i++) {
-        if(!list[A[i]]) {
-            list[A[i]] = 1
-        } else {
-            list[A[i]] += 1
-        }
+//     for (let i=0; i<A.length; i++) {
+//         if(!list[A[i]]) {
+//             list[A[i]] = 1
+//         } else {
+//             list[A[i]] += 1
+//         }
 
-        if(list[A[i]]%2 !==0) {
-            number[A[i]] = 1
-        }
-        if(list[A[i]]%2 === 0) {
-            number[A[i]] = 0
-        }
-    }
-    return number.indexOf(1)
-}
+//         if(list[A[i]]%2 !==0) {
+//             number[A[i]] = 1
+//         }
+//         if(list[A[i]]%2 === 0) {
+//             number[A[i]] = 0
+//         }
+//     }
+//     return number.indexOf(1)
+// }
