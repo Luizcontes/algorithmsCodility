@@ -1,5 +1,5 @@
-// const A = [3, 1, 2, 4, 3]
-const A = [1, 1]
+const A = [3, 1, 2, 4, 3]
+// const A = [1, 1]
 
 function tape(A) {
 
@@ -26,10 +26,10 @@ function tape(A) {
             if(menor === undefined) {
                 menor = Math.abs(left[i-1] - right[i])
             } 
-            else if (Math.abs(left[i-1] - right[i]) < menor) {
+            if (Math.abs(left[i-1] - right[i]) < menor) {
                 menor = Math.abs(left[i-1] - right[i])
             }
-            else if (Math.abs(left[j] - right[j+1]) < menor) {
+            if (Math.abs(left[j] - right[j+1]) < menor) {
                 menor = Math.abs(left[j] - right[j+1])
             }
         }
